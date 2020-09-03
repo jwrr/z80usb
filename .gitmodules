@@ -1,0 +1,6 @@
+[submodule "submodules/tinyfpga_bx_usbserial"]
+	path = submodules/tinyfpga_bx_usbserial
+	url = https://github.com/jwrr/tinyfpga_bx_usbserial.git
+[submodule "submodules/iceZ0mb1e"]
+	path = submodules/iceZ0mb1e
+	url = https://github.com/jwrr/iceZ0mb1e.git
