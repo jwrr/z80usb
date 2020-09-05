@@ -20,6 +20,9 @@ The default C program does a Silly ROT13 loop-back example.  putty <-> usb <-> z
 
 ## Recipe
 
+make clean; make main MAIN=rot13; make
+make clean; make main MAIN=morse; make
+
 * make
 * tinyprog -P z80usb.bin (with TinyFPGA-BX connected)
 * Putty
