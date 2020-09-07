@@ -70,10 +70,11 @@ if I'm wrong).
 These steps clone the repo and download the submodules (most of the work is in 
 the submodules).
 
+```
 git clone https://github.com/jwrr/z80usb
 cd z80usb
 git submodule update --init
-
+```
 
 ## Build Instructions
 
