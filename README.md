@@ -64,6 +64,17 @@ if I'm wrong).
   * [tiny_usb_examples](https://github.com/lawrie/tiny_usb_examples)
     * [tinyfpga-bootloader](https://github.com/tinyfpga/TinyFPGA-Bootloader)
 
+
+## Download and Install
+
+These steps clone the repo and download the submodules (most of the work is in 
+the submodules).
+
+git clone https://github.com/jwrr/z80usb
+cd z80usb
+git submodule update --init
+
+
 ## Build Instructions
 
 make clean; make main MAIN=morse; make
