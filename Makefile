@@ -76,6 +76,10 @@ gui: $(PIN_DEF) $(PROJTOP).json
 prog: $(PROJTOP).bin
 	tinyprog -p $<
 
+init:
+	cp -rv submodules-mod/*  submodules
+	rm -f submodules/iceZ0mb1e/firmware/main/main_blinky.c
+
 copy: # copy local files that have been changed
 	cp -ruv submodules-mod/*  submodules
 

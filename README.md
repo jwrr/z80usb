@@ -79,6 +79,7 @@ git submodule update --init
 ## Build Instructions
 
 ```
+make init
 make clean
 make main MAIN=morse
 make copy
