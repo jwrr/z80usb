@@ -45,10 +45,10 @@ CLK_MHZ = 48
 all:  firmware $(PROJTOP).rpt $(PROJTOP).bin
 
 .PHONY: firmware main
-main:
-	cp submodules/iceZ0mb1e/firmware/main/main.c.$(MAIN) submodules/iceZ0mb1e/firmware/main/main.c
-	ls submodules/iceZ0mb1e/firmware/main/main.c*
-	diff -s submodules/iceZ0mb1e/firmware/main/main.c.$(MAIN) submodules/iceZ0mb1e/firmware/main/main.c
+main:   
+	cp submodules-mod/iceZ0mb1e/firmware/main/main.c.$(MAIN) submodules-mod/iceZ0mb1e/firmware/main/main.c
+	ls submodules-mod/iceZ0mb1e/firmware/main/main.c*
+	diff -s submodules-mod/iceZ0mb1e/firmware/main/main.c.$(MAIN) submodules-mod/iceZ0mb1e/firmware/main/main.c
 
 firmware:
 	make -C $(FIRMWARE_DIR) FIRMWARE_IMG=$(FIRMWARE_IMG) CODE_LOCATION=$(CODE_LOCATION) DATA_LOCATION=$(DATA_LOCATION)
@@ -77,7 +77,7 @@ prog: $(PROJTOP).bin
 	tinyprog -p $<
 
 copy: # copy local files that have been changed
-	cp -ruv submodules/iceZ0mb1e_tweaks/* submodules/iceZ0mb1e
+	cp -ruv submodules-mod/*  submodules
 
 clean:
 	make -C $(FIRMWARE_DIR) clean

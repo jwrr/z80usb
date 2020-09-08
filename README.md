@@ -78,19 +78,29 @@ git submodule update --init
 
 ## Build Instructions
 
-make clean; make main MAIN=morse; make
+```
+make clean
+make main MAIN=morse
+make copy
+make
+```
 
 
 ## Program the FPGA
 
-* tinyprog -p z80usb.bin (with TinyFPGA-BX connected)
-
+```
+tinyprog -p z80usb.bin (with TinyFPGA-BX connected)
+```
 
 ## Terminal Program
+
+```
+# Find COM-port
+apio system --lsserial
+```
 
 * Putty
   * Terminal -> Implicit LF in every CR
   * Serial -> COM8 (or whatever you commport is) -> Open
-    * apio system --lsserial (show commport)
 
 
